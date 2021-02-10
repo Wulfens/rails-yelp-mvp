@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>
+        <%= @restaurant.name %>
+        
+        <%= link_to(new_restaurant_review_path(@restaurant)) do %>
+            <i class="fas fa-pen"></i>
+        <% end %>
+
+        <%# <%= link_to(article_path(@article), method: :delete, data: {confirm: "are you sure?"}) do %>
+            <%# <i class="fas fa-trash"></i>
+        <% end %>
+
+    </h1>
+    <p><%= @restaurant.category %></p>
+    <p><%= @restaurant.address %></p>
+    <p><%= @restaurant.phone_number %></p>
+
+    <div class="comment">
+        <h3>Reviews</h3>
+        <% @restaurant.reviews.each do |review| %>
+            <p><%= review.content %></p>
+            <span><%= "⭐" * review.rating %></span>
+        <% end %>
+    </div>
+</div>

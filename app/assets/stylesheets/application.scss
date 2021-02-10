@@ -1,0 +1,66 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: #F8F8F8;
+    height: 55px;
+    border-bottom: 1px solid lightgrey;
+    a {
+        text-decoration: none;
+        color: grey;
+    }
+    a:hover{
+        color: black;
+    }
+}
+
+.navbar> a:first-child{
+    font-size: 20px;
+}
+
+.container{
+    width: 800px;
+    margin: 40px auto;
+    h2 {
+        a {
+            color: #337ab7;
+            font-size: 30px;
+        }
+        a:hover {
+            color: #23527C;
+        }
+    }
+    
+    p {
+        margin-top: 10px;
+        color: rgb(105, 105, 105);
+    }
+    h1 {
+        font-size: 36px;
+        border-bottom: 1px solid rgb(224, 224, 224);
+        padding: 15px 0;
+    }
+    i {
+        font-size: 20px
+    }
+    h3 {
+        border-bottom: 1px solid rgb(224, 224, 224);
+    }
+}
