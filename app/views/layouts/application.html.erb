@@ -12,7 +12,10 @@
   </head>
 
   <body>
-    <%= render '/shared/navbar' %>
+    <% unless current_page?(action: :show) %>
+      <%= render '/shared/navbar' %>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>
