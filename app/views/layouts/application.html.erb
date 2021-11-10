@@ -12,8 +12,14 @@
   </head>
 
   <body>
-    <% unless current_page?(action: :show) %>
+
+    <% if current_page?(controller: 'restaurants', action: 'index') %>
       <%= render '/shared/navbar' %>
+    <% else %>
+        <div class="navbar">
+      <%= link_to "Restaurants", restaurants_path %>
+      <%= link_to "Add Review", restaurant_path(@restaurant, anchor: "leave-comment") %>
+    </div>
     <% end %>
     
     <%= yield %>
